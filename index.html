@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeeSpace Shop Clone - Product Listing</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="top-promo-bar">Free shipping on all U.S. orders $50+</div>
+
+    <header class="main-header">
+      <a href="index.html"><div class="logo">TeeSpace</div></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="customize.html">TEESPACE</a></li>
+          <li><a href="index.html">SHOP</a></li>
+          <li><a href="pricing.html">BLOG</a></li>
+          <li><a href="#">PAGES</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <i class="fas fa-search"></i>
+        <a href="#" class="login-link">Login</a>
+        <button class="signup-btn">Sign up</button>
+      </div>
+    </header>
+
+    <section class="page-header">
+      <h1>Shop</h1>
+      <p>Home / Shop</p>
+    </section>
+
+    <main class="shop-content-container">
+      <aside class="sidebar">
+        <div class="search-box">
+          <input type="text" placeholder="Search" />
+          <i class="fas fa-search"></i>
+        </div>
+
+        <div class="filter-group">
+          <h3>Product categories <i class="fas fa-chevron-down"></i></h3>
+          <ul class="filter-content">
+            <li>T-Shirts <span>(4)</span></li>
+            <li>Hoodie <span>(2)</span></li>
+            <li>Product designer <span>(1)</span></li>
+            <li>7-Sets <span>(1)</span></li>
+            <li>T-Shirt <span>(14)</span></li>
+          </ul>
+        </div>
+
+        <div class="filter-group">
+          <h3>Filter by price <i class="fas fa-chevron-down"></i></h3>
+          <div class="price-slider-placeholder filter-content">
+            <p>Price: $10 - $30</p>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Filter by Color <i class="fas fa-chevron-down"></i></h3>
+          <ul class="color-list filter-content">
+            <li><span class="color-swatch red"></span> Red <span>(2)</span></li>
+            <li>
+              <span class="color-swatch black"></span> Black <span>(4)</span>
+            </li>
+            <li>
+              <span class="color-swatch white"></span> White <span>(3)</span>
+            </li>
+            <li>
+              <span class="color-swatch yellow"></span> Yellow <span>(1)</span>
+            </li>
+            <li>
+              <span class="color-swatch blue"></span> Blue <span>(1)</span>
+            </li>
+            <li>
+              <span class="color-swatch green"></span> Green <span>(1)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="filter-group">
+          <h3>Filter by Size <i class="fas fa-chevron-down"></i></h3>
+          <ul class="filter-content" style="display: none">
+            <li>S (2)</li>
+            <li>M (5)</li>
+          </ul>
+        </div>
+        <div class="filter-group">
+          <h3>Filter by Material <i class="fas fa-chevron-down"></i></h3>
+          <ul class="filter-content" style="display: none">
+            <li>Cotton (8)</li>
+            <li>Polyester (3)</li>
+          </ul>
+        </div>
+        <div class="filter-group">
+          <h3>Stock status <i class="fas fa-chevron-down"></i></h3>
+          <ul class="filter-content" style="display: none">
+            <li>In Stock (15)</li>
+            <li>On Backorder (2)</li>
+          </ul>
+        </div>
+
+        <div class="sort-by filter-group">
+          <h3>Sort by</h3>
+          <select>
+            <option>Popularity</option>
+            <option>Newest</option>
+            <option>Price: Low to High</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <h3>Product tags</h3>
+          <div
+            class="tag-list filter-content"
+            style="display: block; padding: 10px 0"
+          >
+            <span class="tag">T-Shirt</span>
+            <span class="tag">Hoodie</span>
+          </div>
+        </div>
+      </aside>
+
+      <section class="product-listing">
+        <div class="listing-header">
+          <p>Showing 1–12 of 25 results</p>
+          <div class="view-toggle">
+            <i class="fas fa-th-large active"></i>
+            <i class="fas fa-list"></i>
+          </div>
+        </div>
+
+        <div class="product-grid">
+          <div
+            class="product-card"
+            onclick="window.location.href='product_details.html';"
+          >
+            <div class="product-image-wrapper">
+              <span class="badge new">New</span>
+              <img
+                src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+                alt="Adult Quote Art Tee"
+              />
+              <div class="hover-actions">
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-cart-plus"></i>
+              </div>
+            </div>
+            <p class="product-category">Tee</p>
+            <h4 class="product-title">Adult Quote Art Tee</h4>
+            <p class="product-price">$29.00</p>
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i
+              ><i class="far fa-star"></i>
+              <span>+1</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="window.location.href='product_details.html';"
+          >
+            <div class="product-image-wrapper">
+              <span class="badge sale">Sale</span>
+              <img
+                src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+                alt="All-Over Print Hoodie"
+              />
+              <div class="hover-actions">
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-cart-plus"></i>
+              </div>
+            </div>
+            <p class="product-category">Hoodie</p>
+            <h4 class="product-title">All-Over Print Hoodie</h4>
+            <p class="product-price">$49.00</p>
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+              <span>+5</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="window.location.href='product_details.html';"
+          >
+            <div class="product-image-wrapper">
+              <img
+                src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+                alt="Cut & Sew Tee"
+              />
+              <div class="hover-actions">
+                <i class="fas fa-eye"></i><i class="fas fa-heart"></i
+                ><i class="fas fa-cart-plus"></i>
+              </div>
+            </div>
+            <p class="product-category">Tee</p>
+            <h4 class="product-title">Cut & Sew Tee</h4>
+            <p class="product-price">$24.00</p>
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i
+              ><i class="far fa-star"></i>
+              <span>+1</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="window.location.href='product_details.html';"
+          >
+            <div class="product-image-wrapper">
+              <span class="badge new">New</span>
+              <img
+                src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+                alt="Fine Jersey Tee"
+              />
+              <div class="hover-actions">
+                <i class="fas fa-eye"></i><i class="fas fa-heart"></i
+                ><i class="fas fa-cart-plus"></i>
+              </div>
+            </div>
+            <p class="product-category">Tee</p>
+            <h4 class="product-title">Fine Jersey Tee</h4>
+            <p class="product-price">$18.00</p>
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i
+              ><i class="far fa-star"></i>
+              <span>+3</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="window.location.href='product_details.html';"
+          >
+            <div class="product-image-wrapper">
+              <span class="badge sale">Sale</span>
+              <img
+                src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+                alt="Crew-Neck T-Shirt"
+              />
+              <div class="hover-actions">
+                <i class="fas fa-eye"></i><i class="fas fa-heart"></i
+                ><i class="fas fa-cart-plus"></i>
+              </div>
+            </div>
+            <p class="product-category">T-Shirt</p>
+            <h4 class="product-title">Crew-Neck T-Shirt</h4>
+            <p class="product-price">$24.00</p>
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star-half-alt"></i>
+              <span>+3</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="window.location.href='product_details.html';"
+          >
+            <div class="product-image-wrapper">
+              <img
+                src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+                alt="Hooded Sweatshirt"
+              />
+              <div class="hover-actions">
+                <i class="fas fa-eye"></i><i class="fas fa-heart"></i
+                ><i class="fas fa-cart-plus"></i>
+              </div>
+            </div>
+            <p class="product-category">Hoodie</p>
+            <h4 class="product-title">Hooded Sweatshirt</h4>
+            <p class="product-price">$48.00</p>
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i
+              ><i class="far fa-star"></i>
+              <span>+1</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="window.location.href='product_details.html';"
+          >
+            <div class="product-image-wrapper">
+              <img
+                src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+                alt="Unisex Tee"
+              />
+              <div class="hover-actions">
+                <i class="fas fa-eye"></i><i class="fas fa-heart"></i
+                ><i class="fas fa-cart-plus"></i>
+              </div>
+            </div>
+            <p class="product-category">Tee</p>
+            <h4 class="product-title">Unisex Tee</h4>
+            <p class="product-price">$24.00</p>
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i
+              ><i class="far fa-star"></i>
+              <span>+3</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="window.location.href='product_details.html';"
+          >
+            <div class="product-image-wrapper">
+              <span class="badge new">New</span>
+              <img
+                src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+                alt="Lightweight Tee"
+              />
+              <div class="hover-actions">
+                <i class="fas fa-eye"></i><i class="fas fa-heart"></i
+                ><i class="fas fa-cart-plus"></i>
+              </div>
+            </div>
+            <p class="product-category">Tee</p>
+            <h4 class="product-title">Lightweight Tee</h4>
+            <p class="product-price">$24.00</p>
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star-half-alt"></i>
+              <span>+10</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="window.location.href='product_details.html';"
+          >
+            <div class="product-image-wrapper">
+              <img
+                src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+                alt="Midweight Tee"
+              />
+              <div class="hover-actions">
+                <i class="fas fa-eye"></i><i class="fas fa-heart"></i
+                ><i class="fas fa-cart-plus"></i>
+              </div>
+            </div>
+            <p class="product-category">Tee</p>
+            <h4 class="product-title">Midweight Tee</h4>
+            <p class="product-price">$24.00</p>
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star-half-alt"></i>
+              <span>+12</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="window.location.href='product_details.html';"
+          >
+            <div class="product-image-wrapper">
+              <span class="badge new">New</span>
+              <img
+                src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+                alt="Premium Crewneck"
+              />
+              <div class="hover-actions">
+                <i class="fas fa-eye"></i><i class="fas fa-heart"></i
+                ><i class="fas fa-cart-plus"></i>
+              </div>
+            </div>
+            <p class="product-category">Sweatshirt</p>
+            <h4 class="product-title">Premium Crewneck</h4>
+            <p class="product-price">$39.00</p>
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i
+              ><i class="far fa-star"></i>
+              <span>+1</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="window.location.href='product_details.html';"
+          >
+            <div class="product-image-wrapper">
+              <span class="badge sale">Sale</span>
+              <img
+                src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+                alt="Premium Pullover"
+              />
+              <div class="hover-actions">
+                <i class="fas fa-eye"></i><i class="fas fa-heart"></i
+                ><i class="fas fa-cart-plus"></i>
+              </div>
+            </div>
+            <p class="product-category">Hoodie</p>
+            <h4 class="product-title">Premium Pullover</h4>
+            <p class="product-price">$59.00</p>
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+              <span>+1</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="window.location.href='product_details.html';"
+          >
+            <div class="product-image-wrapper">
+              <img
+                src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+                alt="Product Title"
+              />
+              <div class="hover-actions">
+                <i class="fas fa-eye"></i><i class="fas fa-heart"></i
+                ><i class="fas fa-cart-plus"></i>
+              </div>
+            </div>
+            <p class="product-category">T-Shirt</p>
+            <h4 class="product-title">Product Title</h4>
+            <p class="product-price">$29.00</p>
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i
+              ><i class="far fa-star"></i>
+              <span>+1</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <span class="active">1</span>
+          <span>2</span>
+          <span>3</span>
+          <span><i class="fas fa-arrow-right"></i></span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-columns">
+        <div class="footer-col about">
+          <h4>TeeSpace</h4>
+          <p>+03 (534) 036 3996</p>
+          <p>Mon-Sat: 10AM-8PM</p>
+          <p>hello@teespace.com</p>
+          <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+        </div>
+        <div class="footer-col links">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#">Our Shop</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns & Support</a></li>
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col contact">
+          <h4>Any Question</h4>
+          <a href="mailto:hello@teespace.com">hello@teespace.com</a>
+          <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2022 TeeSpace. All rights reserved.</p>
+        <div class="payment-icons">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-paypal"></i>
+          <i class="fab fa-cc-amex"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

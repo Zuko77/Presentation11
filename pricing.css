@@ -1,0 +1,516 @@
+/* --- Global Variables (Reused) --- */
+:root {
+  --primary-color: #000;
+  --secondary-color: #555;
+  --accent-color: #12b488; /* The green badge/hover color */
+  --light-bg: #f5f5f5;
+  --white: #fff;
+  --border-color: #eee;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Basic Reset and Typography --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+.primary-btn,
+.action-btn {
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  text-align: center;
+  width: 100%;
+}
+
+.section {
+  padding: 60px 50px;
+  text-align: center;
+}
+.pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========================================= */
+/* 1. HEADER & FOOTER STYLES (Reused Logic) */
+/* ========================================= */
+
+.top-promo-bar {
+  background-color: var(--light-bg);
+  color: var(--primary-color);
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+.main-nav a {
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.main-nav li:nth-child(4) a {
+  /* Highlight BLOG/PRICING link */
+  color: var(--accent-color);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.signup-btn {
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* --- Footer --- */
+.site-footer {
+  background-color: var(--light-bg);
+  padding: 40px 50px 20px;
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+  padding-right: 20px;
+}
+
+.footer-col h4 {
+  color: var(--primary-color);
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-col p,
+.footer-col li,
+.footer-col a {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: var(--secondary-color);
+}
+
+.newsletter-col p {
+  margin-bottom: 15px;
+}
+
+.newsletter-col a {
+  display: block;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.social-icons i {
+  font-size: 18px;
+  margin-right: 15px;
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+.payment-icons i {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+/* ========================================= */
+/* 2. PRICING PAGE SPECIFIC STYLES */
+/* ========================================= */
+
+.pricing-hero {
+  background-color: var(--light-bg);
+  padding: 80px 50px 30px;
+  text-align: center;
+}
+
+.pricing-hero h1 {
+  font-size: 36px;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.pricing-hero p {
+  font-size: 16px;
+  color: var(--secondary-color);
+}
+
+/* --- Section 1: Simple Pricing --- */
+.pricing-simple {
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.pricing-simple .pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-align: left;
+  z-index: 1;
+  position: relative;
+}
+
+.simple-pricing-left {
+  flex: 1;
+  max-width: 450px;
+  padding-top: 20px;
+}
+
+.caption {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--accent-color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.simple-pricing-left h2 {
+  font-size: 30px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.simple-pricing-left p {
+  margin-bottom: 20px;
+}
+
+.read-more {
+  font-weight: bold;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+.read-more i {
+  margin-left: 5px;
+}
+
+.simple-pricing-right {
+  display: flex;
+  flex: 1;
+  max-width: 600px;
+  gap: 30px;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 30px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+}
+
+/* What's Inside Card */
+.whats-inside {
+  flex: 1;
+}
+.whats-inside h3 {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+.whats-inside ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+}
+.whats-inside ul li i {
+  color: var(--accent-color);
+  margin-right: 10px;
+}
+.whats-inside .action-btn {
+  margin-top: 20px;
+}
+
+/* Ultimate License Card */
+.ultimate-license {
+  flex: 1;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.license-header {
+  margin-bottom: 10px;
+}
+.license-type {
+  font-weight: bold;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 15px;
+}
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #999;
+}
+.toggle-switch .switch {
+  width: 30px;
+  height: 15px;
+  background-color: var(--light-bg);
+  border-radius: 10px;
+}
+.license-price {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+.license-price span {
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--secondary-color);
+}
+
+/* Background gradient circles for Section 1 (simulated) */
+.pricing-simple::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: 10%;
+  width: 350px;
+  height: 350px;
+  background-color: #e0f7f3; /* Light green circle */
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* --- Section 2: Advanced Pricing --- */
+.pricing-advanced {
+  background: linear-gradient(
+    180deg,
+    #f9f4ff 0%,
+    #fff 100%
+  ); /* Light purple gradient */
+  padding: 80px 50px;
+}
+
+.pricing-advanced .subtitle {
+  margin-bottom: 40px;
+}
+
+.pricing-cards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  flex: 1;
+  text-align: left;
+  max-width: 300px;
+  padding: 40px 30px;
+  position: relative;
+}
+
+.plan-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+.plan-price span {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--secondary-color);
+}
+
+.pricing-card ul {
+  margin-bottom: 30px;
+}
+
+.pricing-card ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+.pricing-card ul li i {
+  color: var(--accent-color);
+  margin-right: 10px;
+}
+
+.professional-card {
+  background-color: var(--white);
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 30px rgba(18, 180, 136, 0.2);
+}
+
+.plan-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--accent-color);
+  color: var(--white);
+  font-size: 12px;
+  padding: 5px 15px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-weight: bold;
+}
+
+/* --- Section 3: Tier Pricing --- */
+.pricing-tier {
+  text-align: left;
+}
+
+.tier-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.tier-left {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+}
+.tier-left img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.tier-left h2 {
+  font-size: 28px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.tier-right {
+  flex: 1;
+  max-width: 600px;
+}
+
+.tier-card {
+  background-color: var(--white);
+  padding: 20px 30px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow);
+}
+
+.tier-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+  min-width: 100px;
+}
+
+.tier-description {
+  flex-grow: 1;
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+.tier-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+.tier-price span {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--secondary-color);
+}
+
+.final-cta-btn {
+  width: auto;
+  display: block;
+  margin-left: auto;
+}
