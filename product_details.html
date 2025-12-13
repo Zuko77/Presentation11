@@ -42,7 +42,7 @@
             <span class="badge new">New</span>
             <img
               id="main-product-img"
-              src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+              src="d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
               alt="Main Product Image"
             />
             <i class="far fa-circle play-icon"></i>
@@ -51,19 +51,19 @@
           <div class="product-thumbnails">
             <i class="fas fa-chevron-left arrow"></i>
             <img
-              src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+              src="d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
               class="thumbnail active"
             />
             <img
-              src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+              src="placeholder_image_2.jpg"
               class="thumbnail"
             />
             <img
-              src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+              src="placeholder_image_3.jpg"
               class="thumbnail"
             />
             <img
-              src="Photos/d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+              src="placeholder_image_4.jpg"
               class="thumbnail"
             />
             <i class="fas fa-chevron-right arrow"></i>
@@ -75,26 +75,51 @@
           <h1 class="product-name">Pullover Hoodie Sweatshirt</h1>
           <div class="product-rating">
             <div class="rating">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i
+              <i class="fas fa-star"></i
+              ><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i
+              ><i class="fas fa-star-half-alt"></i
               ><i class="far fa-star"></i>
             </div>
             <span>4.5 (10 Reviews)</span> | <span>SKU: HO-01</span>
           </div>
 
           <p class="product-price-detail">
-            <span class="discounted">$26.00</span> -
-            <span class="discounted">$29.00</span>
-            <span class="original">$34.00</span>
+            <span class="discounted" id="variant-price">$29.00</span> 
+            <span class="original" id="original-price">$34.00</span>
           </p>
 
           <div class="product-options color-options">
-            <p>Color: <span id="selected-color">Red</span></p>
+            <p>Color: <span id="selected-color">Red</span></p> 
             <div class="swatch-list">
-              <span class="swatch red active"></span>
-              <span class="swatch black"></span>
-              <span class="swatch yellow"></span>
-              <span class="swatch white"></span>
+              <span 
+                class="swatch red active"
+                data-color-name="Red"
+                data-variant-image="d7e1244156d24d4f7fd0dc0fef160215d8995510.jpg"
+                data-variant-price="29.00"
+                data-original-price="34.00"
+              ></span>
+              <span 
+                class="swatch black"
+                data-color-name="Black"
+                data-variant-image="placeholder_black_hoodie.jpg"
+                data-variant-price="28.00"
+                data-original-price="33.00"
+              ></span>
+              <span 
+                class="swatch yellow"
+                data-color-name="Yellow"
+                data-variant-image="placeholder_yellow_hoodie.jpg"
+                data-variant-price="26.00"
+                data-original-price="32.00"
+              ></span>
+              <span 
+                class="swatch white"
+                data-color-name="White"
+                data-variant-image="placeholder_white_hoodie.jpg"
+                data-variant-price="27.50"
+                data-original-price="33.50"
+              ></span>
             </div>
           </div>
 
@@ -111,9 +136,9 @@
 
           <div class="action-bar">
             <div class="quantity-control">
-              <button>-</button>
-              <input type="text" value="1" />
-              <button>+</button>
+              <button class="quantity-minus">-</button>
+              <input type="text" value="1" id="quantity-input" data-min="1" />
+              <button class="quantity-plus">+</button>
             </div>
             <button class="add-to-cart-btn">
               <i class="fas fa-shopping-cart"></i> Add to Cart
@@ -185,6 +210,8 @@
           </ul>
         </div>
         <div id="reviews" class="tab-content"></div>
+        <div id="vendor" class="tab-content"></div>
+        <div id="more" class="tab-content"></div>
       </section>
 
       <section class="related-products-section">
@@ -258,6 +285,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="product_script.js"></script>
+    <script src="detail.js"></script>
   </body>
 </html>

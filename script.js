@@ -1,59 +1,100 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // --- Filter Toggling (For mobile/smaller screens - if applicable) ---
-  const filterToggle = document.querySelector(".filter-toggle-button");
-  const filterSidebar = document.querySelector(".product-filters");
+  const productCards = document.querySelectorAll(".product-card");
+  const colorFilterOptions = document.querySelectorAll(".color-filter-option");
+  const categoryFilterOptions = document.querySelectorAll(
+    ".filter-content.product-category-filters .filter-option"
+  );
+  const resultCountElement = document.getElementById("result-count");
+  const searchInput = document.getElementById("product-search-input");
 
-  if (filterToggle && filterSidebar) {
-    filterToggle.addEventListener("click", function () {
-      filterSidebar.classList.toggle("active");
+  // --- Core Filtering Logic ---
+  function applyFilters() {
+    // 1. Determine active filters
+    const activeColorFilter =
+      document.querySelector(".color-filter-option.active")?.dataset.filter || "all";
+    const activeCategoryFilter =
+      document.querySelector(".filter-content.product-category-filters .filter-option.active")?.dataset.filter || "all";
+    const searchTerm = searchInput.value.toLowerCase().trim(); // Get current search term
+
+    let visibleCount = 0;
+
+    // 2. Iterate over all products
+    productCards.forEach((card) => {
+      const productColor = card.dataset.color;
+      const productCategory = card.dataset.category;
+      const productTitle = card.querySelector(".product-title").textContent.toLowerCase();
+
+      // Check color and category match (from previous logic)
+      const isColorMatch =
+        activeColorFilter === "all" || productColor === activeColorFilter;
+      const isCategoryMatch =
+        activeCategoryFilter === "all" || productCategory === activeCategoryFilter;
+
+      // Check search term match
+      const isSearchMatch =
+        searchTerm === "" || productTitle.includes(searchTerm);
+
+      // 3. Show or hide the card based on ALL filter matches
+      if (isColorMatch && isCategoryMatch && isSearchMatch) {
+        card.style.display = "block"; // Show product
+        visibleCount++;
+      } else {
+        card.style.display = "none"; // Hide product
+      }
     });
+
+    // 4. Update the results count display
+    resultCountElement.textContent = `Showing 1–${visibleCount} of ${productCards.length} results`;
   }
 
-  // --- Filter Option Interaction (Active State) ---
+  // --- New: Search Input Listener ---
+  if (searchInput) {
+    // Trigger filtering immediately on key press
+    searchInput.addEventListener("keyup", applyFilters);
+    // Also trigger if input is cleared by other means
+    searchInput.addEventListener("change", applyFilters);
+  }
 
-  function setupFilterInteraction(selector) {
-    const options = document.querySelectorAll(selector);
+  // --- Filter Interaction / Active State Management (Reused from previous step) ---
+  function setupFilterInteraction(options) {
     options.forEach((option) => {
       option.addEventListener("click", function () {
         // Remove 'active' from all siblings in the same group
-        const parent = this.closest(".filter-group");
-        if (parent) {
-          parent.querySelectorAll(selector).forEach((sibling) => {
-            sibling.classList.remove("active");
-          });
-        }
+        options.forEach((sibling) => {
+          sibling.classList.remove("active");
+        });
+        
         // Add 'active' to the clicked item
         this.classList.add("active");
+
+        // Apply the new filters (includes the search filter now)
+        applyFilters();
       });
     });
   }
 
-  // Apply interaction to color swatches and size buttons (reused from shop view)
-  setupFilterInteraction(".color-filter-swatch");
-  setupFilterInteraction(".size-filter-btn");
+  // Apply interaction to color swatches
+  setupFilterInteraction(colorFilterOptions);
 
-  // --- Product Card Quick View Hover Simulation ---
-  const productCards = document.querySelectorAll(".product-card");
+  // Apply interaction to category filters
+  setupFilterInteraction(categoryFilterOptions);
 
+  // --- Product Card Hover Simulation (Existing Logic) ---
   productCards.forEach((card) => {
     const wrapper = card.querySelector(".product-image-wrapper");
-    if (wrapper) {
+    const hoverActions = card.querySelector(".hover-actions");
+
+    if (wrapper && hoverActions) {
       wrapper.addEventListener("mouseenter", function () {
-        // Show Quick View buttons on hover (simulating an interactive card)
-        const quickView = wrapper.querySelector(".quick-view-overlay");
-        if (quickView) {
-          quickView.style.opacity = 1;
-          quickView.style.transform = "translateY(0)";
-        }
+        hoverActions.style.opacity = 1;
       });
+
       wrapper.addEventListener("mouseleave", function () {
-        // Hide Quick View buttons
-        const quickView = wrapper.querySelector(".quick-view-overlay");
-        if (quickView) {
-          quickView.style.opacity = 0;
-          quickView.style.transform = "translateY(100%)";
-        }
+        hoverActions.style.opacity = 0;
       });
     }
   });
+
+  // Initial call to set the correct result count 
+  applyFilters();
 });
